@@ -1,0 +1,15 @@
+.row {
+	margin-bottom: 0px;
+}
+.input-message {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.talk-overflow {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+#message {
+	padding-bottom: 10px;
+}

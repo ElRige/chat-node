@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Socket.io</title>
+
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="css/chat.css" media="screen,projection"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+	<header>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper container">
+					<a href="#" class="brand-logo"><i class="material-icons">list</i>Chat</a>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+
+	<main class="talk-overflow">
+
+		<div class="container">
+			<div id="talk" ></div>
+		</div>
+
+		<div id="msg-new" class="row input-message white z-depth-2" style="padding:0px 20px;">
+			<div class="valign-wrapper">
+				<div class="input-field col s9">
+					<i class="material-icons prefix">mode_edit</i>
+					<textarea id="message" name="message" class="materialize-textarea" required="required"></textarea>
+					<label for="textarea">Nouveau message</label>
+				</div>
+				<a class="waves-effect waves-light btn  valign col s3" id="send_message"><i class="material-icons right">send</i>Envoyer</a>
+			</div>
+		</div>
+
+	</main>
+
+	<div id="modal1" class="modal bottom-sheet ">
+		<div class="modal-content">
+			<h4>Connexion</h4>
+			<div class="input-field">
+				<i class="material-icons prefix">mode_edit</i>
+				<input type="text" id="pseudo" name="pseudo" />
+				<label for="pseudo">Pseudo</label>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="js/lib/materialize.min.js"></script>
+	<script type="text/javascript" src="js/lib/ejs_production.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
